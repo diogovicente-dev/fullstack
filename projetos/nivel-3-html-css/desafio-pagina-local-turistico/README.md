@@ -1,10 +1,10 @@
 <img src="./assets/thumgnail.png">
 
-# Local Turísitico
+# Local Turístico
 
 Desafio - Projeto para aprendizado
 
-Tecnologias
+## Tecnologias
 
 - HTML
 - CSS

@@ -1,0 +1,13 @@
+/* estilizando o footer */
+footer {
+  display: flex;
+  gap: 24px;
+  padding-block: 24px;
+
+  font: 14px/150% var(--font-family);
+}
+
+/* selecionado o span que é o elemento 1 */
+footer span:nth-child(1) {
+  margin-right: auto; /* empurra os demais itens para a direita */
+}

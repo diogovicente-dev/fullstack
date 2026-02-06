@@ -1,0 +1,15 @@
+/* estilização do main - imagens*/
+main {
+  display: flex;
+  flex-wrap: wrap; /* as imagens vão ficando dentro do espaço */
+  gap: 24px;
+  padding-block: 24px;
+
+  justify-content: center; /* adicionado para se aumentar o zoom as imagens ficarem centralizadas*/
+}
+
+main img {
+  width: 286px;
+  height: 286px;
+  object-fit: cover;
+}

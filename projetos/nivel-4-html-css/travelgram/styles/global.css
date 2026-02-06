@@ -1,0 +1,60 @@
+/* organização das pastas e arquivos para o projeto */
+/* criação de configurações globais para o projeto (variávies, fontes, estilos, ...) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* criação de variáveis globais para o projeto */
+:root {
+  /*branding*/
+  --brand-color: #ef5f4c;
+  /*shape*/
+  --background-color: #ffffff;
+  --surface-color: #f5f5f5;
+  --skeleton-color: #d9d9d9;
+  --shape-transparency: #ffffff8f;
+  /*text*/
+  --text-color-primary: #313131;
+  --text-color-secondary: #6c6c6c;
+  /*fonts*/
+  --font-family: "Poppins", sans-serif;
+  /*informações do projeto e style guide*/
+  /*aplicado o shorthand de 'text' para cada configuração das fontes (cada estilo)*/
+  --text-lg: bold 32px/125% var(--font-family);
+  --text: 16px/150% var(--font-family);
+  --text-md: 14px/170% var(--font-family);
+  --text-sm: 12px/170% var(--font-family);
+}
+
+/* aplicando configurações globais */
+body {
+  font: var(--text);
+  color: var(--text-color-secondary);
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none; /*aplicado para todas as tags <a> do projeto */
+  color: inherit; /* herdando a cor configurada para o body */
+}
+
+a:hover {
+  color: var(
+    --brand-color
+  ); /* no style guide do projeto, ao passar o mouse temos o hover*/
+  text-decoration: underline;
+}
+
+/* criando essa classe genérica que irá conter informações semelhantes dentro do projeto como um todo */
+.container {
+  padding-inline: 32px; /* padding na linha */
+  max-width: 1280px; /* obedecendo ao requisito do projeto */
+  margin-inline: auto; /* mantendo a página centralizada mesmo diminuindo bastante o zoom*/
+}
+
+.bg-surface-color {
+  background-color: var(--surface-color); /* cor de fundo da nav e header */
+}

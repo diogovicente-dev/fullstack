@@ -1,0 +1,24 @@
+/* arquivo CSS específico para NAV */
+nav {
+  display: flex; /*colocando os itens lado a lado*/
+  justify-content: space-between; /* alinha os itens nos 'extremos' da caixa*/
+  align-items: center;
+  line-height: 0; /* garante que não sobre nenhum espaço do texto */
+  padding-block: 20px; /* aplicando um padding apenas no eixo vertical, se tiver 2 valores, o primeiro é em cima*/
+}
+
+nav ul {
+  list-style: none; /*removendo os bullets da lista padrão que vem com o `li` */
+  display: flex; /*colocando os itens lado a lado */
+  align-items: center;
+  gap: 24px; /* espaço entre os elementos */
+  padding-block: 8px;
+}
+
+/*aplicando um estilo especifico para o 'último filho' <li> para ajustar a imagem*/
+nav ul li:last-child img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover; /* remove o aspecto 'esticado' de uma foto */
+  border-radius: 50%; /* deixa uma foto 'quadrada' redonda */
+}
