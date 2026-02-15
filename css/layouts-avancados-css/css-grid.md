@@ -1,10 +1,10 @@
 # CSS Grid
 
-**Grid Template**
-**Grid Column / Row**
-**Grid Template Areas**
-**Alinhamento GRID**
-**Grid Auto**
+**Grid Template** <br>
+**Grid Column / Row** <br>
+**Grid Template Areas** <br>
+**Alinhamento GRID** <br>
+**Grid Auto** <br>
 
 ## Explicando GRID
 

@@ -1,0 +1,32 @@
+#primary {
+  padding-block: 20px;
+
+  /* aplicando o flex porque resolve melhor */
+  div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* nesting css => formato novo para utilização do css */
+  div:nth-child(2) {
+    margin-inline: auto;
+  }
+
+  div:nth-child(3) {
+    justify-self: end;
+  }
+}
+
+/* nesting css 
+dentro do #primary é como se estivesse fazendo o que está a seguir:
+#primary div:nth-child(2) {
+}
+*/
+
+#secondary {
+  padding-block: 14px;
+  border: solid 1px var(--stroke-color);
+  border-inline: none; /* remove apenas as bordas laterais */
+  justify-content: space-between;
+}

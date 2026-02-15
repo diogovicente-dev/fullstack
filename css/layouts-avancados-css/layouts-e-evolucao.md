@@ -95,7 +95,7 @@ section {
 ```css
 /* inset */
 .position {
-  inset: 10px 20px 30px 40px; /* top, bottom, left, right */
+  inset: 10px 20px 30px 40px; /* como se fosse um 'shorthand' para top, bottom, left, right */
 }
 ```
 
