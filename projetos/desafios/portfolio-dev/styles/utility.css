@@ -1,0 +1,15 @@
+.grid {
+  display: grid;
+}
+
+.grid-template-col3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  padding-inline: 120px;
+}

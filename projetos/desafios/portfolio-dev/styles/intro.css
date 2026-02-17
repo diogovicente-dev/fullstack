@@ -1,0 +1,85 @@
+#intro {
+  background: url(../assets/Background_Intro.png) no-repeat center/100%;
+  margin-inline: auto;
+  width: 1366px;
+  height: 750px;
+
+  header {
+    max-width: 1040px;
+    margin: auto;
+    padding-top: 120px;
+    justify-items: center;
+  }
+
+  #avatar {
+    width: 112px;
+    height: 112px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+
+      border: 2px solid var(--red);
+      border-radius: 50%;
+
+      position: absolute;
+      inset: 8px;
+    }
+
+    img {
+      width: 100%;
+      padding: 12px;
+      border-radius: 50%;
+    }
+
+    span {
+      display: inline-block;
+      background-image: url(../assets/icons/Code.svg);
+      width: 36px;
+      height: 32px;
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      z-index: 1;
+    }
+  }
+
+  #text-intro {
+    margin-top: 56px;
+    width: 680px;
+    text-align: center;
+
+    p:nth-child(1) {
+      font: var(--subtitle);
+
+      span {
+        color: var(--red);
+      }
+    }
+
+    h1 {
+      font: var(--title-lg);
+      color: var(--gray-100);
+      margin-top: 8px;
+    }
+
+    p:nth-child(3) {
+      color: var(--gray-300);
+    }
+  }
+
+  #tags {
+    margin-top: 80px;
+    margin-inline: auto;
+    height: 40px;
+    gap: 16px;
+  }
+
+  #next {
+    margin-top: 94px;
+    padding-bottom: 57px;
+
+    text-align: center;
+  }
+}
