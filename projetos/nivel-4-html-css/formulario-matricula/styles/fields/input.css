@@ -1,0 +1,104 @@
+input,
+textarea,
+select {
+  appearance: none; /* removendo qualquer questão de aparência */
+
+  width: 100%; /* tamanho padrão */
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  outline: 1px solid var(--stroke-default); /* pelo tamanho de 1px pode deixar assim */
+
+  padding: 0.75rem 1rem;
+
+  font: var(--text);
+}
+
+label {
+  font: var(--text-sm);
+  color: var(--text-secondary);
+
+  display: block; /* label é inline, coloca block pra aceitar o margin-bottom */
+  margin-bottom: 0.25rem;
+}
+
+/* quando o input estiver focado */
+input:focus,
+select:focus,
+textarea:focus,
+input[type="date"]:focus-within /* aqui é 'algum elemento dentro desse input está com foco, aplica isso' */ {
+  outline: 0.25rem solid var(--surface-secondary);
+  border-color: var(--stroke-highlight);
+  outline-offset: 0.1px; /* pra funcionar no safari */
+}
+
+input[type="date"] {
+  position: relative; /* configurando para ajustar o ícone do calendário */
+
+  /* ocultando o calendário padrão do navegador (teste edge e safari) */
+  /* a 'função' do datapicker ainda continua no navegador, mas com o ícone coforme projeto */
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
+  /* criando o elemento do calendário */
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../../assets/icons/calendar-03.svg) center/contain;
+    right: 1rem;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    /* alinhando ao meio em elementos absolutos */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+select {
+  background: url(../../assets/icons/arrow-down-01.svg) no-repeat
+    calc(100% - 1rem);
+}
+
+.address .flex {
+  gap: 1.25rem;
+}
+
+.input-wrapper:has([disabled]) {
+  opacity: 0.5;
+}
+
+input {
+  &[disabled] /* dentro do input que possuir o atributo 'disabled' */ {
+    background-color: var(--surface-disabled);
+    border: 1px solid var(--stroke-default);
+    color: var(--text-primary);
+  }
+
+  &:invalid /* se o campo ficar for inválido por algum motivo (obrigatório, preenchido errado, ... ) */ {
+    border: 0.125rem solid var(--semantic-error);
+  }
+
+  & + small {
+    font: var(--text-sm);
+    color: #78716c;
+    display: inline-block;
+    margin-top: 0.25rem;
+  }
+
+  &[required] + .error /* atributo 'required' no html */ {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font: var(--text-sm);
+    color: var(--semantic-error);
+    margin-top: 0.25rem;
+  }
+
+  /* ocultando a mensagem de erro ao preencher o email */
+  /* se o input não estiver em foco e estiver válido, perra o '.error' oculta */
+  &:not(:focus):valid + .error {
+    display: none;
+  }
+}

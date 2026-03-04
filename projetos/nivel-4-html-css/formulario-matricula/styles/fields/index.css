@@ -1,0 +1,7 @@
+@import url(./input.css);
+@import url(./droparea.css);
+@import url(./radio.css);
+@import url(./checkbox.css);
+@import url(./buttons.css);
+
+/* a ordem de importação importa; se importar um arquivo e depois reescrever o css logo abaixo, vale o que estiver escrito abaixo */
