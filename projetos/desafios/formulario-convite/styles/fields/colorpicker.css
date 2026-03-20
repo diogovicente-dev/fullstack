@@ -1,0 +1,39 @@
+.colorpicker-wrapper {
+  height: 2.5rem;
+  margin-top: 1rem;
+  width: 100%;
+
+  justify-content: space-between;
+
+  & .colorpicker-inner {
+    height: 100%;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--shape-button);
+    padding: 0.375rem;
+    position: relative;
+
+    & input {
+      all: unset;
+      height: 1.75rem;
+      width: 1.75rem;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    &:focus,
+    &:focus-within {
+      border: 2px solid var(--brand-light);
+      padding: 0.25rem;
+    }
+
+    &:hover {
+      background-color: var(--shape-hover);
+    }
+
+    &:has(:checked) {
+      border: 2px solid var(--brand-light);
+      padding: 0.25rem;
+    }
+  }
+}

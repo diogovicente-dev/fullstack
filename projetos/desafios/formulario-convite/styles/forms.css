@@ -1,0 +1,77 @@
+@import url(./fields/index.css);
+
+fieldset {
+  border: none;
+}
+
+input,
+textarea {
+  appearance: none;
+  width: 100%;
+}
+
+.legend {
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  & img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  & legend {
+    font: var(--heading-sm);
+    color: (--text-heading);
+  }
+}
+
+button {
+  appearance: none;
+  all: unset;
+  box-sizing: border-box;
+}
+
+#button-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  background-color: var(--shape-button);
+  font: var(--text-sm);
+  color: var(--text-heading);
+  height: 2.5rem;
+
+  & img {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  &:hover {
+    background-color: var(--shape-hover);
+  }
+}
+
+#button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  padding: 1.25rem 0.875rem;
+  background-color: var(--brand-dark);
+  font: var(--text-md);
+  font-weight: 600;
+  color: var(--text-heading);
+  height: 3rem;
+
+  & img {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  &:hover {
+    background-color: var(--brand-mid);
+  }
+}

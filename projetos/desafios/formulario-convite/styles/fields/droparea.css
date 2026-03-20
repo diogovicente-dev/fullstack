@@ -1,0 +1,27 @@
+.droparea-wrapper {
+  & label {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  & button {
+    position: relative;
+
+    & input {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & p {
+    width: 100%;
+    font: var(--text-md);
+    color: var(--input-placeholder);
+  }
+}

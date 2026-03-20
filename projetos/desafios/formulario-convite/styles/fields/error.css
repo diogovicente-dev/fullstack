@@ -1,0 +1,16 @@
+.error {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+
+  & img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  & span {
+    font: var(--text-sm);
+    color: var(--danger);
+  }
+}

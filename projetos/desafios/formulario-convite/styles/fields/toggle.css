@@ -1,0 +1,46 @@
+#toggle-style {
+  position: relative;
+
+  & input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+
+  & .toggle {
+    align-items: center;
+    margin-top: 0.75rem;
+    padding-block: 0.5rem;
+
+    & .toggle-image {
+      background-image: url(../../assets/icons/toogle-dark.png);
+      width: 4rem;
+      height: 2rem;
+    }
+
+    #light {
+      display: none;
+    }
+
+    & p {
+      font: var(--text-sm);
+    }
+  }
+
+  &:has(:checked) {
+    & .toggle-image {
+      background-image: url(../../assets/icons/toogle-light.png);
+      width: 4rem;
+      height: 2rem;
+    }
+
+    #dark {
+      display: none;
+    }
+
+    #light {
+      display: block;
+    }
+  }
+}
