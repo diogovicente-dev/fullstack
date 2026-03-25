@@ -47,6 +47,12 @@
   --font-size-large: 1.25rem;
   --font-size-x-large: 1.5rem;
   --font-size-2x-large: 2.5rem;
+
+  /* spacing */
+  --padding-x-axis-lg: 1.5rem;
+  --padding-y-axis-base: 1rem;
+  --padding-y-axis-lg: 1.5rem;
+  --padding-y-axis-xl: 3rem;
 }
 
 html {
@@ -101,5 +107,13 @@ ul[role="list"] {
     --font-size-large: 2rem;
     --font-size-x-large: 3rem;
     --font-size-2x-large: 4rem;
+
+    /* ajuste do .container (padding-inline do container) */
+    --padding-x-axis-lg: 2rem;
+
+    /* variáveis das classes utilitárias */
+    --padding-y-axis-base: 1.5rem;
+    --padding-y-axis-lg: 2.5rem;
+    --padding-y-axis-xl: 5rem;
   }
 }

@@ -1,0 +1,57 @@
+/* classes utilitárias */
+.padding-y-base {
+  padding-block: var(--padding-y-axis-base);
+}
+
+.padding-y-lg {
+  padding-block: var(--padding-y-axis-lg);
+}
+
+.padding-y-xl {
+  padding-block: var(--padding-y-axis-xl);
+}
+
+.padding-x-lg {
+  padding-inline: var(--padding-x-axis-lg);
+}
+
+.container {
+  --max-width: 375px;
+  /* mobile */
+  /* variável para trocar posteriormente com o @media */
+
+  width: min(var(--max-width), 100% - var(--padding-x-axis-lg) * 2);
+  /* pega o menor mesma coisa se fizesse assim:
+  max-width: var(--max-width);
+  width: calc(100% - var(--padding-x-axis-lg) * 2); */
+  /* nessa regra, pega o menor 'width' e aplica; limita em até 375px mais a 'margem' inline (como se fosse um 'padding' ajustável) */
+
+  margin-inline: auto;
+}
+
+/* utilização dessa classe para 'ocultar, exibir' o elemento */
+.desktop-only {
+  display: none; /* como o projeto é 'mobile first', mesmo contruindo ao mesmo tempo, o padrão é 'oculto' */
+}
+
+.even-column {
+  /* classe para elementos mobile que são um abaixo do outro e no desktop serão um ao lado do outro */
+  display: grid;
+  gap: 1rem;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+  }
+
+  .desktop-only {
+    display: initial; /* aplica o 'initial' de acordo com o elemento: se div, block; se span, inline */
+  }
+
+  .even-column {
+    /* deixando a criação dos grid 'automático' na versão desktop */
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
