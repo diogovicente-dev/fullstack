@@ -1,0 +1,105 @@
+/* aplicando para todas as pseudo-classes before e after, pois a ideia é utilizar no projeto */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 'resetando o css' */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; /* reset de fonte (h1, strong, etc) não fica com o padrão do navegador */
+
+  /* deixando as fontes mais suaves edge, safari, chrome, mozzila */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /*product colors*/
+  --brand-color-primary: #f7b733;
+  --brand-color-secondary: #fc4a1a;
+  --brand-gradient: linear-gradient(
+    90deg,
+    var(--brand-color-secondary),
+    var(--brand-color-primary)
+  );
+
+  /*base colors*/
+  --background-color: #09090b;
+  --surface-color: #18181b;
+  --stroke-color: #27272a;
+  --text-color-secondary: #a1a1aa;
+  --text-color-primary: #f4f4f5;
+
+  /*typography*/
+  --font-family-sans:
+    "Inter", system-ui, sans-serif; /* system-ui => padrão do sistema */
+  /*font-weight*/
+  --font-weight-base: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 800; /* este projeto o bold é o 'EXTRA-BOLD' */
+  /* font-size */
+  /* aplicado valores apenas do 'mobile' inicalmente */
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-x-large: 1.5rem;
+  --font-size-2x-large: 2.5rem;
+}
+
+html {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-base);
+  font-size: var(--font-size-base);
+  color: var(--text-color-primary);
+  line-height: 1.6; /* 160% */
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+/* como resetou os títulos, precisa configurar tudo */
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--text-color-primary);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em; /* pego do projeto '-4%' */
+}
+
+h1 {
+  font-size: var(--font-size-2x-large);
+}
+
+h2 {
+  font-size: var(--font-size-x-large);
+}
+
+h3 {
+  font-size: var(--font-size-large);
+}
+
+a {
+  /* resetando a tag 'a' */
+  text-decoration: none;
+  color: inherit;
+}
+
+ul[role="list"] {
+  list-style: none;
+  /* alguns navegadores ao fazer o list-style none deixam de interpretar como lista, então nas listas colocamos na tag ul o 'role=list', assim o navegador continua interpretando como lista, mesmo sem a 'bolinha' da lista */
+}
+
+@media (width >= 80em /* em => busca o "font-size" do pai e, o pai do @media, é sempre o root */) {
+  :root {
+    /* alteração das fontes h1, h2 e h3 apenas, pois as outras 2 não alteram */
+    --font-size-large: 2rem;
+    --font-size-x-large: 3rem;
+    --font-size-2x-large: 4rem;
+  }
+}
