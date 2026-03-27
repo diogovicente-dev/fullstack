@@ -1,0 +1,80 @@
+/* criando uma classe para o botão, resetando caso for a tag <a> ou <button> ou qualquer outra */
+.btn {
+  /* essas variáveis são apenas para o botão, não podem ser igual a nenhuma variável definida no global.css*/
+  --btn-bg-color: var(--text-color-primary);
+  --btn-color: var(--background-color);
+
+  border: 0;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content; /* largura se adapta ao conteúdo da 'caixa', no caso, do botão */
+
+  border-radius: 0.5rem;
+
+  /* font: 500 1rem/1.5rem 'Inter' */
+  font: var(--font-weight-medium) var(--font-size-base)/1.5rem
+    var(--font-family-sans);
+
+  cursor: pointer;
+
+  /* configurações do botão primary no padrão, depois muda para o button secondary com outra classe */
+  background: var(--btn-bg-color);
+  color: var(--btn-color);
+}
+
+.btn:hover {
+  --btn-bg-color: var(--brand-gradient);
+  --btn-color: var(--surface-color);
+}
+
+/* no projeto tem 3 tipos de botões */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-small);
+}
+
+.btn-md {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-base);
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem; /* como esse font-size é só no botão, não criou-se uma variável para ele */
+}
+
+/* a classe .btn que tiver o aria-label será definido como o botão secundário */
+/* estratégia utilizada devido ao degradê a ser aplicado no hover do botão secundário (degradê na borda e no 'label' do botão)*/
+.btn[aria-label] {
+  position: relative;
+
+  /* configurações do 'fundo' do botão, para manter a borda */
+  &::before {
+    content: "";
+    border-radius: inherit; /* pega o que está definido no botão */
+    position: absolute;
+    inset: 1.5px;
+    background-color: var(--background-color);
+  }
+
+  /* configurações do texto do botão */
+  &::after {
+    content: attr(aria-label); /* attr é o 'atributo' */
+
+    /* aqui colocando um 'background' só na 'caixa' do texto */
+    background: var(--btn-bg-color);
+
+    /* nestes comandos, definindo que o background deve ser 'cortado' (clip) conforme o texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* removendo a cor padrão do texto, para aplicar o 'hover' */
+    color: transparent;
+
+    position: relative;
+    z-index: 1;
+  }
+}

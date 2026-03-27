@@ -22,8 +22,8 @@
   --brand-color-secondary: #fc4a1a;
   --brand-gradient: linear-gradient(
     90deg,
-    var(--brand-color-secondary),
-    var(--brand-color-primary)
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%
   );
 
   /*base colors*/
