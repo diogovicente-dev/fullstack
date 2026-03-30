@@ -1,0 +1,5 @@
+header {
+  & a:first-child {
+    margin-right: auto; /* pegando o primeiro elemento e 'empurrando' os demais elementos para a direita */
+  }
+}

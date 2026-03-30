@@ -28,6 +28,11 @@
 .btn:hover {
   --btn-bg-color: var(--brand-gradient);
   --btn-color: var(--surface-color);
+
+  /* reescrevendo para aplicar no btn:hover*/
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  color: var(--btn-color);
 }
 
 /* no projeto tem 3 tipos de botões */
@@ -76,5 +81,17 @@
 
     position: relative;
     z-index: 1;
+  }
+}
+
+@media (width >= 80em) {
+  .btn-sm {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-base);
+  }
+
+  .btn-md {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
   }
 }
