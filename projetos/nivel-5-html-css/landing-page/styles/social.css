@@ -1,0 +1,45 @@
+/* definindo uma classe para os links social para definição de tamanhos tamanhos da caixa */
+a.social {
+  --bg-image: ""; /* criando variável do background para facilitar a troca depois */
+  background-image: var(--bg-image);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+
+  /* o hover ficou 'preto' por causa da config no global do webkit-backgorund-clip */
+  /* aqui 'volta' ao padrão para aplicar corretamente */
+  -webkit-background-clip: initial;
+  background-clip: initial;
+
+  &[aria-label="tiktok"] {
+    --bg-image: url(../assets/icons/tiktok.svg);
+
+    &:hover {
+      --bg-image: url(../assets/icons/tiktok-hover.svg);
+    }
+  }
+
+  &[aria-label="instagram"] {
+    --bg-image: url(../assets/icons/instagram.svg);
+
+    &:hover {
+      --bg-image: url(../assets/icons/instagram-hover.svg);
+    }
+  }
+
+  &[aria-label="discord"] {
+    --bg-image: url(../assets/icons/discord.svg);
+
+    &:hover {
+      --bg-image: url(../assets/icons/discord-hover.svg);
+    }
+  }
+
+  &[aria-label="twitter"] {
+    --bg-image: url(../assets/icons/twitter.svg);
+
+    &:hover {
+      --bg-image: url(../assets/icons/twitter-hover.svg);
+    }
+  }
+}

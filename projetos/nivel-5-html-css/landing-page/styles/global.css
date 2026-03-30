@@ -96,6 +96,17 @@ a {
   color: inherit;
 }
 
+/* aplicando o estilo no menu com a tag a (menu e footer da página) */
+a:hover {
+  /* mesma estratégia do botão */
+  background: var(--brand-gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
 ul[role="list"] {
   list-style: none;
   /* alguns navegadores ao fazer o list-style none deixam de interpretar como lista, então nas listas colocamos na tag ul o 'role=list', assim o navegador continua interpretando como lista, mesmo sem a 'bolinha' da lista */
