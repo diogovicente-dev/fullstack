@@ -1,0 +1,78 @@
+/* aqui não preciso do @media devido á regra de importação no index.css */
+#features {
+  & .cards {
+    grid-template-columns: 17.5rem 1fr 1fr 17.5rem; /* definindo 4 colunas devido ao layout */
+    grid-template-rows: 25rem 25rem; /* definindo a altura do card no grid , primeira e segunda linha */
+    gap: 2rem;
+  }
+
+  & .card {
+    position: relative;
+    overflow: hidden; /* escondendo o transbordo da imagem */
+
+    & img.desktop-only {
+      position: absolute;
+      max-width: 15rem;
+      /* filter aplica efeitos no elementos desejado, várias funções */
+      /* modifica a imagem através do filter neste caso */
+      filter: drop-shadow(1rem 1rem 4rem rgb(0 0 0 / 0.64));
+    }
+  }
+
+  & .card:nth-child(1) {
+    grid-column: 1/2;
+  }
+
+  & .card:nth-child(2) {
+    grid-column: 2/4; /* definindo o espaço que o card irá ocupar */
+
+    & > div {
+      /* ajustando a primeira 'div' */
+      max-width: 16rem;
+    }
+
+    & .desktop-only {
+      /* posicionando corretamente a imagem */
+      bottom: 2rem;
+      right: 2rem;
+    }
+  }
+
+  & .card:nth-child(3) {
+    /* apenas garantindo que o elemento fique no local correto */
+    grid-column: 4/5;
+  }
+
+  & .card:nth-child(4) {
+    grid-column: 1/3; /* definindo o espaço que o card irá ocupar */
+    grid-row: 2/3; /* garantindo que esse card fique na linha de baixo */
+
+    & > div {
+      /* ajustando a primeira 'div' */
+      max-width: 16rem;
+      margin-left: auto; /* empurrando o elemento para a direita */
+    }
+
+    & .desktop-only {
+      /* posicionando corretamente a imagem */
+      bottom: 2rem;
+      left: 2rem;
+    }
+  }
+
+  & .card:nth-child(5) {
+    grid-column: 3/5; /* definindo o espaço que o card irá ocupar */
+    grid-row: 2/3; /* garantindo que esse card fique na linha de baixo */
+
+    & > div {
+      /* ajustando a primeira 'div' */
+      max-width: 16rem;
+    }
+
+    & .desktop-only {
+      /* posicionando corretamente a imagem */
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+}
