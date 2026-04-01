@@ -112,6 +112,11 @@ ul[role="list"] {
   /* alguns navegadores ao fazer o list-style none deixam de interpretar como lista, então nas listas colocamos na tag ul o 'role=list', assim o navegador continua interpretando como lista, mesmo sem a 'bolinha' da lista */
 }
 
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
 @media (width >= 80em /* em => busca o "font-size" do pai e, o pai do @media, é sempre o root */) {
   :root {
     /* alteração das fontes h1, h2 e h3 apenas, pois as outras 2 não alteram */
