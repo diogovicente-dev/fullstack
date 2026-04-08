@@ -8,3 +8,4 @@
 @import url(./about.css);
 @import url(./cards.css);
 @import url(./features.css) (width >= 80rem); /* aplicando uma regra para chamar esse arquivo apenas quando a tela for de 'desktop' */
+@import url(./pricing.css);

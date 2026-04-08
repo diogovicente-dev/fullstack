@@ -61,7 +61,7 @@
     content: "";
     border-radius: inherit; /* pega o que está definido no botão */
     position: absolute;
-    inset: 1.5px;
+    inset: 1px;
     background-color: var(--background-color);
   }
 
