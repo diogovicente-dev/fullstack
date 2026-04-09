@@ -10,3 +10,4 @@
 @import url(./features.css) (width >= 80rem); /* aplicando uma regra para chamar esse arquivo apenas quando a tela for de 'desktop' */
 @import url(./pricing.css);
 @import url(./download.css);
+@import url(./footer.css);

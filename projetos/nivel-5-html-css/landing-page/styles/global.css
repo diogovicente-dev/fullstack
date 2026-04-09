@@ -63,6 +63,7 @@ html {
   line-height: 1.6; /* 160% */
 
   overflow-x: hidden; /* por causa da imagem em posição absoluta, seção download, para não ter rolagem na horizontal */
+  scroll-behavior: smooth; /* scroll para as seções da página */
 }
 
 body {
