@@ -68,6 +68,7 @@ html {
 
 body {
   background-color: var(--background-color);
+  overflow-x: hidden; /* adicionando remoção do scroll no body também */
 }
 
 /* como resetou os títulos, precisa configurar tudo */
