@@ -61,6 +61,8 @@ html {
   font-size: var(--font-size-base);
   color: var(--text-color-primary);
   line-height: 1.6; /* 160% */
+
+  overflow-x: hidden; /* por causa da imagem em posição absoluta, seção download, para não ter rolagem na horizontal */
 }
 
 body {
