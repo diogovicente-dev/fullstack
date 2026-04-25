@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  padding-inline: var(--padding-x);
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-1\.5 {
+  gap: 1.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.hide {
+  display: none;
+}

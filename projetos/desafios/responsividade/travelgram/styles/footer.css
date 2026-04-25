@@ -1,0 +1,29 @@
+footer {
+  padding-block: var(--padding-y);
+  justify-content: center;
+
+  & p {
+    text-align: center;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+    color: var(--brand-color);
+  }
+}
+
+@media (width >= 80em) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+    --padding-x: 2rem;
+    --padding-y: 1.5rem;
+
+    & p {
+      text-align: left;
+    }
+
+    & div {
+      justify-content: right;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+header {
+  background-color: var(--surface-color);
+  padding-block: var(--padding-y);
+
+  align-items: center;
+
+  & > img {
+    margin-right: auto;
+    width: 10.125rem;
+  }
+
+  & nav {
+    align-items: center;
+
+    & a {
+      font: var(--text-nm);
+    }
+  }
+
+  & a:hover {
+    text-decoration: underline;
+    color: var(--brand-color);
+  }
+
+  & svg:hover {
+    cursor: pointer;
+    & path {
+      fill: var(--brand-color);
+    }
+  }
+
+  & #profile-img img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+@media (width >= 80em) {
+  header {
+    --padding-y: 1.25rem;
+    --padding-x: 2rem;
+
+    .desktop-only {
+      display: initial;
+    }
+  }
+}
