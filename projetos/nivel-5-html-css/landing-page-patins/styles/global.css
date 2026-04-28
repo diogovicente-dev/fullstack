@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --snitap-sun: #ffcd1e;
+  --snitap-sky-mid: #06b6d4;
+  --snitap-sky-light: #67e8f9;
+  --snitap-joy-mid: #db2777;
+  --snitap-joy-light: #f472b6;
+  --snitap-leaf-mid: #16a34a;
+  --text: #000000;
+  --highlights: #000000;
+  --background: #fafafa;
+
+  /* fonts */
+  --ff-syne: "Syne", sans-serif;
+  --ff-montserrat: "Montserrat", sans-serif;
+  --ff-inter: "Inter", sans-serif;
+
+  /* typography */
+  --h1: 700 4rem/125% var(--ff-syne);
+  --h2: 700 2.5rem/120% var(--ff-syne);
+  --button-label: 500 1rem/150% var(--ff-montserrat);
+  --text-sm: 500 0.875rem/150% var(--ff-montserrat);
+  --text-cart: 500 0.75rem/130% var(--ff-inter);
+}
+
+html,
+button {
+  font: var(--button-label);
+}
+
+h1 {
+  font: var(--h1);
+}
+
+h2 {
+  font: var(--h2);
+}
