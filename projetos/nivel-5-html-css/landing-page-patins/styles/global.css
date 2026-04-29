@@ -44,6 +44,7 @@ button {
 body {
   max-width: 80rem;
   margin-inline: auto;
+  background-color: var(--background);
 }
 
 h1 {
@@ -63,7 +64,7 @@ a {
   :root {
     --padding-x: 1.5rem;
     --padding-y: 1.5rem;
-    --font-size-h1: 2rem; 
+    --font-size-h1: 2rem;
   }
 
   body {
