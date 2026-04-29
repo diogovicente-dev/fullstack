@@ -24,7 +24,7 @@
   --ff-inter: "Inter", sans-serif;
 
   /* typography */
-  --h1: 700 4rem/125% var(--ff-syne);
+  --h1: 700 var(--font-size-h1)/125% var(--ff-syne);
   --h2: 700 2.5rem/120% var(--ff-syne);
   --button-label: 500 1rem/150% var(--ff-montserrat);
   --text-sm: 500 0.875rem/150% var(--ff-montserrat);
@@ -33,6 +33,7 @@
   /* configurations */
   --padding-x: 2rem;
   --padding-y: 2.5rem;
+  --font-size-h1: 4rem;
 }
 
 html,
@@ -42,7 +43,7 @@ button {
 
 body {
   max-width: 80rem;
-  margin: auto;
+  margin-inline: auto;
 }
 
 h1 {
@@ -62,5 +63,10 @@ a {
   :root {
     --padding-x: 1.5rem;
     --padding-y: 1.5rem;
+    --font-size-h1: 2rem; 
+  }
+
+  body {
+    width: 22.5rem;
   }
 }

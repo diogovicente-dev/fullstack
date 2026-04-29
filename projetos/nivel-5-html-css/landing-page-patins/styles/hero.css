@@ -1,0 +1,125 @@
+#hero {
+  --height-changing-words: 5rem;
+  padding-block: var(--padding-y);
+
+  & #main {
+    max-width: 40rem;
+
+    & h1 {
+      & div {
+        display: inline-block; /* deixando a div com comportamento inline, porém aceitando altura e largura, como um elemento block */
+        height: var(--height-changing-words); /* altura da caixa */
+        overflow: hidden; /* escondendo as 'palavras' */
+        width: min-content; /* alinha o tamanho da caixa de acordo com o 'elemento' maior, para que não quebre as letras, apenas as palavras */
+        vertical-align: bottom; /* alinhar com o título corretamente */
+
+        & span:nth-child(1),
+        span:nth-child(4) {
+          color: var(--snitap-sky-mid);
+        }
+
+        & span:nth-child(2) {
+          color: var(--snitap-joy-mid);
+        }
+
+        & span:nth-child(3) {
+          color: var(--snitap-leaf-mid);
+        }
+
+        & span {
+          animation: slideUp 6s infinite ease;
+          display: block;
+          /* colocar o display block pois o span é um inline (não aceita height), então deslocamento no y não acontece se for inline, por isso colocar o block */
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  /* radical static */
+  0%,
+  22% {
+    transform: translateY(0); /* mantém fixa a palavra 'radical' */
+  }
+
+  /* divertida in */
+  /* fazer espécie de bounce entre as trocas (subir, descer, subir e descer novamente */
+
+  23% {
+    transform: translateY(calc(-1 * var(--height-changing-words) - 15px));
+  }
+
+  25% {
+    transform: translateY(calc(-1 * var(--height-changing-words) + 10px));
+  }
+
+  27% {
+    transform: translateY(calc(-1 * var(--height-changing-words) - 5px));
+  }
+
+  29% {
+    transform: translateY(calc(-1 * var(--height-changing-words) + 5px));
+  }
+
+  /* divertida static */
+  33%,
+  55% {
+    transform: translateY(calc(-1 * var(--height-changing-words)));
+    /* para subir 1 palavra de espaço (até o divertida) */
+  }
+
+  /* saudável in */
+  /* fazer espécie de bounce entre as trocas (subir, descer, subir e descer novamente */
+  56% {
+    transform: translateY(calc(-2 * var(--height-changing-words) - 15px));
+  }
+
+  58% {
+    transform: translateY(calc(-2 * var(--height-changing-words) + 10px));
+  }
+
+  60% {
+    transform: translateY(calc(-2 * var(--height-changing-words) - 5px));
+  }
+
+  62% {
+    transform: translateY(calc(-2 * var(--height-changing-words) + 5px));
+  }
+
+  /* sauvável static */
+
+  66%,
+  88% {
+    transform: translateY(calc(-2 * var(--height-changing-words)));
+    /* para subir as 2 palavras de espaço (até o sauvável) */
+  }
+
+  /* radical in */
+  89% {
+    transform: translateY(calc(-3 * var(--height-changing-words) - 15px));
+  }
+
+  91% {
+    transform: translateY(calc(-3 * var(--height-changing-words) + 10px));
+  }
+
+  93% {
+    transform: translateY(calc(-3 * var(--height-changing-words) - 5px));
+  }
+
+  95% {
+    transform: translateY(calc(-3 * var(--height-changing-words) + 5px));
+  }
+
+  100% {
+    transform: translateY(calc(-3 * var(--height-changing-words)));
+    /* essa animação volta para o radical, para deixar o efeito infinito*/
+  }
+}
+
+@media (width <= 22.5rem) {
+  #hero {
+    --height-changing-words: 2.5rem;
+  }
+}

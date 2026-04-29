@@ -2,6 +2,14 @@
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
 .container {
   padding-inline: var(--padding-x);
 }
