@@ -1,0 +1,46 @@
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-0\.5 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.container {
+  padding-inline: var(--padding-x);
+}
+
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: initial;
+}
+
+.separator {
+  width: 100%;
+  border-top: 1px solid var(--stroke-color);
+}
+
+@media (width >= 80em) {
+  .desktop-only {
+    display: initial;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}

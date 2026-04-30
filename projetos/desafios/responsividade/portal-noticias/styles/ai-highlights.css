@@ -1,0 +1,43 @@
+#ai-highlights {
+  & .news {
+    padding-top: 1.5rem;
+
+    & .ai-new {
+      & img {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      & div {
+        & h2 {
+          margin-top: 0.5rem;
+          max-height: 2.75rem;
+          overflow: hidden;
+        }
+
+        & p {
+          margin-top: 0.25rem;
+          max-height: 5.5rem;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  #ai-highlights {
+    & .news .ai-new {
+      flex-direction: row-reverse;
+
+      & img {
+        width: 11rem;
+        height: 11rem;
+      }
+
+      & .tag {
+        margin-top: 6px;
+      }
+    }
+  }
+}

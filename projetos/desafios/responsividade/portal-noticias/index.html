@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal de Notícias - Tech News</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="flex container">
+        <a href="#" class="flex gap-0.5">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.8125 10C17.8125 10.2486 17.7137 10.4871 17.5379 10.6629C17.3621 10.8387 17.1236 10.9375 16.875 10.9375H3.125C2.87636 10.9375 2.6379 10.8387 2.46209 10.6629C2.28627 10.4871 2.1875 10.2486 2.1875 10C2.1875 9.75136 2.28627 9.5129 2.46209 9.33709C2.6379 9.16127 2.87636 9.0625 3.125 9.0625H16.875C17.1236 9.0625 17.3621 9.16127 17.5379 9.33709C17.7137 9.5129 17.8125 9.75136 17.8125 10ZM3.125 5.9375H16.875C17.1236 5.9375 17.3621 5.83873 17.5379 5.66291C17.7137 5.4871 17.8125 5.24864 17.8125 5C17.8125 4.75136 17.7137 4.5129 17.5379 4.33709C17.3621 4.16127 17.1236 4.0625 16.875 4.0625H3.125C2.87636 4.0625 2.6379 4.16127 2.46209 4.33709C2.28627 4.5129 2.1875 4.75136 2.1875 5C2.1875 5.24864 2.28627 5.4871 2.46209 5.66291C2.6379 5.83873 2.87636 5.9375 3.125 5.9375ZM16.875 14.0625H3.125C2.87636 14.0625 2.6379 14.1613 2.46209 14.3371C2.28627 14.5129 2.1875 14.7514 2.1875 15C2.1875 15.2486 2.28627 15.4871 2.46209 15.6629C2.6379 15.8387 2.87636 15.9375 3.125 15.9375H16.875C17.1236 15.9375 17.3621 15.8387 17.5379 15.6629C17.7137 15.4871 17.8125 15.2486 17.8125 15C17.8125 14.7514 17.7137 14.5129 17.5379 14.3371C17.3621 14.1613 17.1236 14.0625 16.875 14.0625Z"
+              fill="#F1F5F9"
+            />
+          </svg>
+          <p class="desktop-only">Menu</p>
+        </a>
+        <p class="logo">tech news</p>
+        <a href="#" class="flex gap-0.5">
+          <p class="desktop-only">Buscar</p>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.1633 16.8367L14.4531 13.125C15.5656 11.6754 16.0849 9.85688 15.9059 8.03841C15.7268 6.21993 14.8628 4.53765 13.489 3.33282C12.1152 2.12799 10.3345 1.49084 8.50822 1.55061C6.68193 1.61038 4.94675 2.3626 3.65467 3.65467C2.3626 4.94675 1.61038 6.68193 1.55061 8.50822C1.49084 10.3345 2.12799 12.1152 3.33282 13.489C4.53765 14.8628 6.21993 15.7268 8.03841 15.9059C9.85688 16.0849 11.6754 15.5656 13.125 14.4531L16.8383 18.1672C16.9255 18.2544 17.029 18.3236 17.143 18.3708C17.2569 18.418 17.379 18.4423 17.5024 18.4423C17.6257 18.4423 17.7478 18.418 17.8617 18.3708C17.9757 18.3236 18.0792 18.2544 18.1664 18.1672C18.2536 18.08 18.3228 17.9765 18.37 17.8625C18.4172 17.7486 18.4415 17.6265 18.4415 17.5031C18.4415 17.3798 18.4172 17.2577 18.37 17.1438C18.3228 17.0298 18.2536 16.9263 18.1664 16.8391L18.1633 16.8367ZM3.43752 8.75002C3.43752 7.6993 3.74909 6.67218 4.33283 5.79855C4.91658 4.92491 5.74628 4.244 6.71701 3.84191C7.68774 3.43981 8.75591 3.33461 9.78643 3.53959C10.817 3.74458 11.7636 4.25054 12.5065 4.99351C13.2495 5.73648 13.7555 6.68307 13.9604 7.7136C14.1654 8.74412 14.0602 9.81229 13.6581 10.783C13.256 11.7538 12.5751 12.5835 11.7015 13.1672C10.8278 13.7509 9.80073 14.0625 8.75002 14.0625C7.3415 14.0611 5.99108 13.5009 4.99511 12.5049C3.99914 11.5089 3.43896 10.1585 3.43752 8.75002Z"
+              fill="#F1F5F9"
+            />
+          </svg>
+        </a>
+      </nav>
+      <div class="separator"></div>
+      <nav class="flex container">
+        <a href="#">Inteligência Artificial</a>
+        <a href="#">Blockhain</a>
+        <a href="#">Hologramas</a>
+        <a href="#">Internet</a>
+        <a href="#">Vestíveis</a>
+        <a href="#">Realidade Aumentada</a>
+        <a href="#">Realidade Virtual</a>
+      </nav>
+      <div class="separator"></div>
+    </header>
+
+    <main class="container grid gap-2">
+      <section id="highlights" class="grid gap-1">
+        <div class="highlight">
+          <img src="./assets/images/Image 01.png" alt="" />
+          <div>
+            <span class="tag">robótica</span>
+            <h1>
+              Robôs domésticos começam a ser adotados para tarefas
+              <span class="mobile-only">...</span>
+              <span class="desktop-only">
+                diárias, prometendo mais conforto e eficiência nas residências.
+              </span>
+            </h1>
+          </div>
+        </div>
+        <div class="grid gap-1">
+          <div class="highlight secondary">
+            <img src="./assets/images/Image 02.png" alt="" />
+            <div>
+              <span class="tag">hologramas</span>
+              <h3>
+                Novo Smartphone Projetor 3D chega ao mercado, transformando a
+                forma como vemos nossas telas!
+              </h3>
+            </div>
+          </div>
+
+          <div class="highlight secondary">
+            <img src="./assets/images/Image 03.png" alt="" />
+            <div>
+              <span class="tag">internet</span>
+              <h3>
+                Tecnologia 6G chega às metrópoles brasileiras, prometendo
+                revolucionar a forma como vivemos e nos comuni<span
+                  class="desktop-only"
+                  >...</span
+                >
+                <span class="mobile-only">camos.</span>
+              </h3>
+            </div>
+          </div>
+
+          <div class="highlight secondary">
+            <img src="./assets/images/Image 04.png" alt="" />
+            <div>
+              <span class="tag">vestíveis</span>
+              <h3>
+                Empresa lança relógio inteligente capaz de monitorar a saúde
+                mental, oferecendo insights valiosos para o<span
+                  class="desktop-only"
+                  >...</span
+                >
+                <span class="mobile-only">bem-estar pessoal.</span>
+              </h3>
+            </div>
+          </div>
+
+          <div class="highlight secondary">
+            <img src="./assets/images/Image 05.png" alt="" />
+            <div>
+              <span class="tag">realidade virtual</span>
+              <h3>
+                Escolas adotam a tecnologia VR para proporcionar experiências
+                imersivas, transformando a aprendizagem trad
+                <span class="desktop-only">...</span>
+                <span class="mobile-only">icional.</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="most-read">
+        <div class="separator"></div>
+        <div class="heading flex">
+          <p>Mais lidas de semana</p>
+          <a href="#" class="flex">
+            <span>Ver tudo</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.0306 8.53061L9.53063 13.0306C9.38973 13.1715 9.19863 13.2507 8.99938 13.2507C8.80012 13.2507 8.60902 13.1715 8.46813 13.0306C8.32723 12.8897 8.24807 12.6986 8.24807 12.4994C8.24807 12.3001 8.32723 12.109 8.46813 11.9681L11.6875 8.74999H2.5C2.30109 8.74999 2.11032 8.67097 1.96967 8.53032C1.82902 8.38967 1.75 8.1989 1.75 7.99999C1.75 7.80108 1.82902 7.61031 1.96967 7.46966C2.11032 7.329 2.30109 7.24999 2.5 7.24999H11.6875L8.46937 4.02999C8.32848 3.88909 8.24932 3.69799 8.24932 3.49874C8.24932 3.29948 8.32848 3.10838 8.46937 2.96749C8.61027 2.82659 8.80137 2.74744 9.00062 2.74744C9.19988 2.74744 9.39098 2.82659 9.53187 2.96749L14.0319 7.46749C14.1018 7.53726 14.1573 7.62016 14.1951 7.71142C14.2329 7.80269 14.2523 7.90052 14.2522 7.99931C14.252 8.09809 14.2324 8.19588 14.1944 8.28706C14.1564 8.37824 14.1007 8.46101 14.0306 8.53061Z"
+                fill="#F1F5F9"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="news grid gap-2">
+          <div class="most-read-new grid">
+            <img src="./assets/images/Image 06.png" alt="" />
+            <h2>
+              Protótipo de veículo voador é apresentado, marcando o início da
+              era dos transportes aéreos pessoais.
+            </h2>
+            <span class="tag">veículos</span>
+          </div>
+
+          <div class="most-read-new">
+            <img src="./assets/images/Image 07.png" alt="" />
+            <h2>
+              Plataforma de videoconferência apresenta nova função de
+              hologramas, tornando as chamadas virtuais mais<span
+                class="desktop-only"
+                >...</span
+              >
+              realistas e<span class="mobile-only">...</span>
+              envolventes.
+            </h2>
+            <span class="tag">hologramas</span>
+          </div>
+
+          <div class="most-read-new">
+            <img src="./assets/images/Image 08.png" alt="" />
+            <h2>
+              Nova geração de consoles de videogame é lançada, trazendo gráficos
+              ultra-realistas e experiências de jogo totalmente envolventes.
+            </h2>
+            <span class="tag">realidade virtual</span>
+          </div>
+
+          <div class="most-read-new">
+            <img src="./assets/images/Image 09.png" alt="" />
+            <h2>
+              Projeto busca oferecer internet de alta velocidade em áreas
+              remotas através de satélites.
+            </h2>
+            <span class="tag">internet</span>
+          </div>
+        </div>
+      </section>
+      
+      <div class="grid gap-2">
+        <section id="ai-highlights">
+          <div class="separator"></div>
+          <div class="heading flex">
+            <p>Destaques de Inteligência Artificial</p>
+            <a href="#" class="flex">
+              <span>Ver tudo</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.0306 8.53061L9.53063 13.0306C9.38973 13.1715 9.19863 13.2507 8.99938 13.2507C8.80012 13.2507 8.60902 13.1715 8.46813 13.0306C8.32723 12.8897 8.24807 12.6986 8.24807 12.4994C8.24807 12.3001 8.32723 12.109 8.46813 11.9681L11.6875 8.74999H2.5C2.30109 8.74999 2.11032 8.67097 1.96967 8.53032C1.82902 8.38967 1.75 8.1989 1.75 7.99999C1.75 7.80108 1.82902 7.61031 1.96967 7.46966C2.11032 7.329 2.30109 7.24999 2.5 7.24999H11.6875L8.46937 4.02999C8.32848 3.88909 8.24932 3.69799 8.24932 3.49874C8.24932 3.29948 8.32848 3.10838 8.46937 2.96749C8.61027 2.82659 8.80137 2.74744 9.00062 2.74744C9.19988 2.74744 9.39098 2.82659 9.53187 2.96749L14.0319 7.46749C14.1018 7.53726 14.1573 7.62016 14.1951 7.71142C14.2329 7.80269 14.2523 7.90052 14.2522 7.99931C14.252 8.09809 14.2324 8.19588 14.1944 8.28706C14.1564 8.37824 14.1007 8.46101 14.0306 8.53061Z"
+                  fill="#F1F5F9"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="news grid gap-2">
+            <div class="ai-new flex gap-1">
+              <img src="./assets/images/Image 10.png" alt="" />
+              <div>
+                <span class="tag">inteligência artificial</span>
+                <h2>
+                  Empresa surpreende o mundo ao anunciar um algoritmo capaz de
+                  prever eventos futuros com alta precisão.
+                </h2>
+                <p>
+                  Em um avanço surpreendente da inteligência artificial, uma
+                  empresa anuncia o desenvolvimento de um algoritmo capaz de
+                  prever eventos futuros com notável precisão. Descubra como
+                  essa tecnologia está desafiando as fronteiras da previsão e
+                  quais são as implicações para diversas áreas, desde finanças
+                  até planejamento estratégico.
+                </p>
+              </div>
+            </div>
+
+            <div class="ai-new flex gap-1">
+              <img src="./assets/images/Image 11.png" alt="" />
+              <div>
+                <span class="tag">inteligência artificial</span>
+                <h2>
+                  Dispositivo portátil promete traduzir instantaneamente
+                  diferentes idiomas, facilitando a comunicação global.
+                </h2>
+                <p>
+                  Em um mundo cada vez mais conectado, a comunicação sem
+                  fronteiras é essencial. Nesse contexto, um dispositivo
+                  portátil surge como um verdadeiro herói linguístico,
+                  prometendo quebrar as barreiras idiomáticas instantaneamente.
+                  Imagine poder se comunicar fluentemente em qualquer lugar do
+                  mundo, independentemente do idioma local. Este dispositivo não
+                  é mais uma visão futurista, mas uma realidade impressionante
+                  que está transformando a forma como nos conectamos
+                  globalmente. Nesta reportagem, mergulharemos nas
+                  funcionalidades deste dispositivo revolucionário e como ele
+                  está moldando uma nova era de compreensão global.
+                </p>
+              </div>
+            </div>
+
+            <div class="ai-new flex gap-1">
+              <img src="./assets/images/Image 12.png" alt="" />
+              <div>
+                <span class="tag">inteligência artificial</span>
+                <h2>
+                  Criados para auxiliar idosos, robôs de companhia ganham
+                  popularidade, oferecendo suporte emocional e físico aos
+                  usuários.
+                </h2>
+                <p>
+                  A tecnologia não só avança, mas também busca tornar a vida
+                  mais significativa para todas as gerações. No cenário atual,
+                  os robôs sociais, projetados especialmente para oferecer apoio
+                  e companhia aos idosos, estão ganhando destaque. Mais do que
+                  meros assistentes, esses robôs são programados para fornecer
+                  suporte emocional e físico, preenchendo lacunas nas
+                  necessidades de cuidado. Nesta matéria, exploraremos como
+                  esses companheiros tecnológicos estão impactando positivamente
+                  a qualidade de vida da terceira idade e proporcionando uma
+                  nova perspectiva sobre o envelhecimento.
+                </p>
+              </div>
+            </div>
+
+            <div class="ai-new flex gap-1">
+              <img src="./assets/images/Image 13.png" alt="" />
+              <div>
+                <span class="tag">inteligência artificial</span>
+                <h2>
+                  Aplicativo utiliza inteligência artificial para ajudar
+                  usuários a manterem o foco e aumentarem a produtividade no dia
+                  a dia.
+                </h2>
+                <p>
+                  No turbilhão da vida moderna, onde distrações são abundantes,
+                  um aplicativo inovador surge como um aliado indispensável para
+                  quem busca maior concentração e eficiência no cotidiano.
+                  Utilizando avançados algoritmos de inteligência artificial,
+                  este aplicativo promete mais do que simplesmente gerenciar
+                  tarefas; ele está programado para compreender os padrões de
+                  trabalho de cada usuário, oferecendo sugestões personalizadas
+                  para otimizar o tempo e maximizar a produtividade. Nesta
+                  matéria, exploraremos como essa ferramenta tecnológica está se
+                  tornando a chave para manter o foco em um mundo cada vez mais
+                  cheio de distrações, transformando a maneira como encaramos
+                  nossas responsabilidades diárias.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="grid gap-2">
+          <section id="ads">
+            <img src="./assets/images/Ads.png" alt="" />
+          </section>
+
+          <section id="last-news">
+            <div class="separator"></div>
+            <div class="heading flex">
+              <p>Viu isso aqui?</p>
+              <a href="#" class="flex">
+                <span>Ver tudo</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.0306 8.53061L9.53063 13.0306C9.38973 13.1715 9.19863 13.2507 8.99938 13.2507C8.80012 13.2507 8.60902 13.1715 8.46813 13.0306C8.32723 12.8897 8.24807 12.6986 8.24807 12.4994C8.24807 12.3001 8.32723 12.109 8.46813 11.9681L11.6875 8.74999H2.5C2.30109 8.74999 2.11032 8.67097 1.96967 8.53032C1.82902 8.38967 1.75 8.1989 1.75 7.99999C1.75 7.80108 1.82902 7.61031 1.96967 7.46966C2.11032 7.329 2.30109 7.24999 2.5 7.24999H11.6875L8.46937 4.02999C8.32848 3.88909 8.24932 3.69799 8.24932 3.49874C8.24932 3.29948 8.32848 3.10838 8.46937 2.96749C8.61027 2.82659 8.80137 2.74744 9.00062 2.74744C9.19988 2.74744 9.39098 2.82659 9.53187 2.96749L14.0319 7.46749C14.1018 7.53726 14.1573 7.62016 14.1951 7.71142C14.2329 7.80269 14.2523 7.90052 14.2522 7.99931C14.252 8.09809 14.2324 8.19588 14.1944 8.28706C14.1564 8.37824 14.1007 8.46101 14.0306 8.53061Z"
+                    fill="#F1F5F9"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="news grid gap-2">
+              <div class="last-new flex gap-1">
+                <img src="./assets/images/Image 14.png" alt="" />
+                <div>
+                  <span class="tag">software</span>
+                  <h3>
+                    Aplicativo de monitoramento ambiental ganha destaque,
+                    incentivando práticas ecológicas e promovendo a
+                    conscientização.
+                  </h3>
+                </div>
+              </div>
+
+              <div class="last-new flex gap-1">
+                <img src="./assets/images/Image 15.png" alt="" />
+                <div>
+                  <span class="tag">realidade virtual</span>
+                  <h3>
+                    Óculos de realidade virtual com feedback tátil proporcionam
+                    uma experiência sensorial completa, imergindo usuários em
+                    ambientes digitais.
+                  </h3>
+                </div>
+              </div>
+
+              <div class="last-new flex gap-1">
+                <img src="./assets/images/Image 16.png" alt="" />
+                <div>
+                  <span class="tag">criptomoedas</span>
+                  <h3>
+                    Surge uma nova moeda digital baseada em tecnologias
+                    sustentáveis, buscando minimizar o impacto ambiental
+                    associado à mineração de criptomoedas.
+                  </h3>
+                </div>
+              </div>
+
+              <div class="last-new flex gap-1">
+                <img src="./assets/images/Image 17.png" alt="" />
+                <div>
+                  <span class="tag">drones</span>
+                  <h3>
+                    Empresas de e-commerce implementam frota de drones para
+                    entregas rápidas, transformando o cenário do comércio
+                    online.
+                  </h3>
+                </div>
+              </div>
+
+              <div class="last-new flex gap-1">
+                <img src="./assets/images/Image 18.png" alt="" />
+                <div>
+                  <span class="tag">impressão 3d</span>
+                  <h3>
+                    Tecnologia inovadora permite a impressão 3D de órgãos
+                    humanos, revolucionando a medicina e a lista de espera por
+                    transplantes.
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

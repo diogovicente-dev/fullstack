@@ -1,0 +1,43 @@
+header {
+  & nav {
+    align-items: center;
+    padding-block: 1rem;
+    justify-content: space-between;
+
+    & a {
+      white-space: nowrap; /* não quebrar linhas com espaços nos textos */
+    }
+  }
+
+  & nav:nth-child(3) {
+    gap: 2rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* ocultando Firefox */
+    -ms-overflow-style: none; /* ocultando Internet Explorer 10+ */
+
+    &::-webkit-scrollbar {
+      /* escondendo o scrollbar Chrome, Safari e Opera */
+      display: none;
+    }
+  }
+
+  & nav a:hover {
+    & svg path {
+      fill: var(--brand-color-light);
+    }
+  }
+}
+
+@media (width >= 80em) {
+  header {
+    & nav:nth-child(1) {
+      padding-block: 1.5rem;
+    }
+
+    & nav:nth-child(3) {
+      width: 100%;
+    }
+  }
+}

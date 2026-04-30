@@ -1,0 +1,30 @@
+#most-read {
+  & .news {
+    padding-block: 1.5rem;
+
+    & .most-read-new {
+      gap: 0.5rem;
+      position: relative;
+
+      & h2 {
+        max-height: 4.125rem;
+        overflow: hidden;
+      }
+
+      & span.tag {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  #most-read {
+    & .news {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+  }
+}

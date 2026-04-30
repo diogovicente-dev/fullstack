@@ -1,0 +1,32 @@
+aside {
+  & #last-news {
+    & .news {
+      margin-top: 1.5rem;
+
+      & .last-new {
+        & img {
+          width: 4rem;
+          height: 4rem;
+        }
+
+        & .tag {
+          margin-top: 2px;
+        }
+
+        & h3 {
+          margin-top: 0.5rem;
+          max-height: 2.5rem;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  main {
+    & > div {
+      grid-template-columns: 43.5rem 30.5rem;
+    }
+  }
+}
