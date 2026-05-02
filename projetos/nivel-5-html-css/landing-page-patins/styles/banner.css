@@ -1,0 +1,44 @@
+.banner {
+  width: 100%;
+  /* garantindo que o banner ficará com largura de 100% */
+  padding-block: var(--padding-y);
+  overflow: hidden;
+  /* garantindo que nada 'transborde' do limite do banner */
+
+  & .scroller {
+    width: 100%;
+    overflow: hidden;
+    padding-block: 1rem;
+
+    & .rolling {
+      animation: rolling 2s linear infinite;
+    }
+  }
+
+  & .bg-gradient-animate {
+    background: linear-gradient(
+      45deg,
+      var(--snitap-sky-light),
+      var(--snitap-joy-light)
+    );
+    background-size: 400%;
+    /* aumentando o tamanho do background para dar a sensação de movimentação (se deixar 100% a animação não dá certo)*/
+    background-position: 0 50%;
+    /* 0 garante a posição inicial do background no eixo x, o 50% garante a centralização no eixo y */
+    animation: bg-animate 20s ease infinite;
+  }
+}
+
+@keyframes bg-animate {
+  50% {
+    background-position: 100% 50%;
+    /* na metada do tempo da animação é como se o background fosse deslocado para o 'fim' .. */
+  }
+}
+
+@keyframes rolling {
+  to {
+    transform: translateX(-131px);
+    /* valor identificado somando o tamanho da imagem (patins + estrela) e ajustando para não dar o 'pulo' em telas*/
+  }
+}
