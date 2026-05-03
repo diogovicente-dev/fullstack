@@ -1,0 +1,141 @@
+.gallery {
+  width: 100%;
+  padding-block: var(--padding-y) 0;
+
+  & header {
+    text-align: center;
+
+    & h2 {
+      margin-top: 0.875rem;
+    }
+  }
+
+  & .content {
+    padding-block: 2rem;
+    gap: 2rem;
+    grid-template-areas:
+      "A B B"
+      "C C D";
+
+    & figure {
+      border-radius: 2.5rem;
+      overflow: hidden;
+      position: relative;
+      line-height: 0;
+      /* aplica o line height porque a imagem estava pegando algum line-height e bugando o preenchimento da imagem */
+
+      animation: image-appear linear backwards;
+      /* sem tempo para usar o animation da view */
+      animation-timeline: view();
+      animation-range: 6.25rem 18.75rem;
+
+      &[data-delay] {
+        animation-range: 9.375rem 21.875rem;
+      }
+
+      &:nth-child(1) {
+        grid-area: A;
+      }
+
+      &:nth-child(2) {
+        grid-area: B;
+      }
+
+      &:nth-child(3) {
+        grid-area: C;
+      }
+
+      &:nth-child(4) {
+        grid-area: D;
+      }
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+
+      & > img {
+        height: 25rem;
+        object-fit: cover;
+
+        transition: transform 500ms;
+      }
+
+      & figcaption {
+        align-items: center;
+        justify-content: flex-end;
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        padding: 1.5rem 2rem;
+        transform: translateY(100%);
+        /* esse transform 'tira' o figcaption da tela */
+        transition: transform 500ms;
+
+        background: linear-gradient(to top, rgb(0 0 0 / 0.64), rgb(0 0 0 / 0));
+
+        & img {
+          width: 2rem;
+          aspect-ratio: 1/1;
+          /* manter aspecto quadrado */
+          object-fit: cover;
+          border-radius: 50%;
+          /* garante que a imagem será redonda */
+        }
+
+        & span {
+          color: #ffffff;
+        }
+      }
+
+      &:hover {
+        & > img {
+          transform: scale(1.1);
+        }
+
+        & figcaption {
+          transform: translateY(0);
+          /* porque ele vai vir de baixo para cima com animação */
+        }
+      }
+    }
+  }
+}
+
+@keyframes image-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@media (width <= 22.5rem) {
+  .gallery {
+    & .content {
+      padding-block: var(--padding-y);
+      gap: 1.5rem;
+      grid-template-areas: none;
+
+      & figure {
+        animation-range: 4rem 12rem;
+
+        &[data-delay] {
+          animation-range: 4rem 12rem;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          grid-area: initial;
+        }
+
+        & > img {
+          height: 16rem;
+        }
+      }
+    }
+  }
+}
