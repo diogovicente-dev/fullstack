@@ -6,6 +6,7 @@
 
 - Aplicação de animações
 - Aplicação de transições
+- Aplicando layout responsivo com a aula
 
 ## Techs
 

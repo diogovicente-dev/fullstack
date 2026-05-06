@@ -29,6 +29,7 @@
   --button-label: 500 1rem/150% var(--ff-montserrat);
   --text-sm: 500 var(--font-size-sm)/150% var(--ff-montserrat);
   --text-cart: 500 0.75rem/130% var(--ff-inter);
+  --font-logo: 700 1.25rem/130% var(--ff-syne);
 
   /* configurations */
   --padding-x: 2rem;
