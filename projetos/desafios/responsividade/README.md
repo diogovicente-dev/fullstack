@@ -14,6 +14,8 @@ https://github.com/diogovicente-dev/fullstack/tree/main/projetos/desafios/respon
 
 ## Portal de Notícias
 
+https://github.com/diogovicente-dev/fullstack/tree/main/projetos/desafios/responsividade/portal-noticias
+
 ## Formulário de Matrícula
 
 ## Techs

@@ -1,0 +1,48 @@
+@import url(./fields/index.css);
+
+form {
+  --gap-fieldset: 1.25rem;
+  margin-top: 3rem;
+
+  & fieldset {
+    gap: var(--gap-fieldset);
+    margin-top: 3rem;
+
+    & legend {
+      margin-bottom: var(--gap-fieldset);
+    }
+
+    & .grid-columns-address {
+      gap: var(--gap-fieldset);
+    }
+  }
+
+  & .actions-wrapper {
+    margin-top: 4rem;
+    flex-direction: column;
+  }
+}
+
+@media (width >= 80em) {
+  form {
+    --gap-fieldset: 1.5rem;
+
+    & fieldset .grid-columns-address {
+      grid-template-columns: 20.75rem 11rem;
+      column-gap: 1.25rem;
+    }
+
+    & fieldset.enrollment {
+      & .input-wrapper:nth-child(3) {
+        & .radio-wrapper {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+
+    & .actions-wrapper {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}

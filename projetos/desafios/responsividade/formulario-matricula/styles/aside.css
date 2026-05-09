@@ -1,0 +1,36 @@
+aside {
+  background-color: var(--surface-secondary);
+
+  & header {
+    justify-content: center;
+  }
+
+  & > img {
+    width: 100%;
+  }
+}
+
+@media (width >= 80em) {
+  #page {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    height: 100vh;
+    /* aqui eu garanto que a minha página não se mova */
+
+    & aside {
+      max-width: 39rem;
+      height: 100vh;
+
+      & header {
+        & h1 {
+          color: var(--text-primary);
+
+          & span {
+            color: var(--text-highlight);
+          }
+        }
+      }
+    }
+  }
+}

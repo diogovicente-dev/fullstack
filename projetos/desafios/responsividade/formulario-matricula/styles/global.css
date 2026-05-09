@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* brand colors */
+  --brand-light: #f67841;
+  --brand-mid: #f3541c;
+  --brand-dark: #e43a12;
+  /* text colors */
+  --text-primary: #292524;
+  --text-secondary: #57534e;
+  --text-tertiary: #8f8881;
+  --text-highlight: #e43a12;
+  /* surface color */
+  --surface-primary: #ffffff;
+  --surface-secondary: #fee7d6;
+  --surface-disabled: #e7e5e4;
+  /* stroke */
+  --stroke-default: #d6d3d1;
+  --stroke-highlight: #f3541c;
+  /* error */
+  --semantic-error: #dc2626;
+  /* supporting */
+  --orange: #f9a474;
+  --yellow: #fedf6f;
+  --green: #c7d78d;
+  --blue: #b8cedc;
+  --violet: #c3b2e7;
+  --pink: #f682a5;
+  /* typography */
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-mont: "Montserrat", sans-serif;
+  --h1: 600 2.5rem/125% var(--ff-poppins);
+  --h2: 600 1.5rem/120% var(--ff-poppins);
+  --h3: 600 1.25rem/120% var(--ff-poppins);
+  --legend: 600 1rem/125% var(--ff-poppins);
+  --text: 400 1rem/150% var(--ff-poppins);
+  --text-sm: 400 0.875rem/140% var(--ff-poppins);
+  --text-label-radio: 500 1rem/150% var(--ff-mont);
+  /* configurations */
+  --padding-container: 1.5rem;
+  --padding-input: 0.75rem 1rem;
+  --border-radius-input: 0.5rem;
+}
+
+body {
+  margin: auto;
+  max-width: 22.5rem;
+  font: var(--text);
+  color: var(--text-secondary);
+}
+
+h1 {
+  font: var(--h1);
+}
+
+h2 {
+  font: var(--h2);
+}
+
+h3 {
+  font: var(--h3);
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font: var(--legend);
+}
+
+label {
+  display: inline-block;
+  font: var(--text-sm);
+}
+
+input,
+select,
+textarea {
+  appearance: none;
+  padding: var(--padding-input);
+  border-radius: var(--border-radius-input);
+}
+
+p {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (width >= 80em) {
+  :root {
+    --padding-container: 4rem;
+  }
+
+  body {
+    max-width: 80rem;
+  }
+}

@@ -1,0 +1,27 @@
+main {
+  overflow: auto;
+
+  & > a {
+    align-items: center;
+    color: var(--text-secondary);
+
+    &:hover {
+      color: var(--brand-light);
+
+      & svg {
+        & path {
+          stroke: var(--brand-light);
+        }
+      }
+    }
+  }
+
+  & > h2 {
+    color: var(--text-primary);
+    margin-top: 1.5rem;
+  }
+
+  & > p {
+    margin-top: 0.5rem;
+  }
+}
